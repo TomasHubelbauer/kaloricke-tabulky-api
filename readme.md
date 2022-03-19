@@ -47,3 +47,23 @@ import getCookies from 'https://tomashubelbauer.github.io/kaloricke-tabulky-api/
 const cookies = await getCookies(email, password);
 // …
 ```
+
+### TypeScript
+
+Create a new file named `types.d.ts`, add its directory to `typeRoots` in the
+`tsconfig.json` configuration file.
+
+```typescript
+declare module 'https://tomashubelbauer.github.io/kaloricke-tabulky-api/getCookies.js' {
+  export default function (email: string, password: string): Promise<string[]>;
+}
+
+declare module 'https://tomashubelbauer.github.io/kaloricke-tabulky-api/getRecentWeight.js' {
+  export default function (cookies: string[]): Promise<{ date: string; weight: number; }[]>;
+}
+
+declare module 'https://tomashubelbauer.github.io/kaloricke-tabulky-api/recordWeight.js' {
+  export default function (weight: string | number, cookies: string[]): Promise<{ requestId: null; code: number; message: string; data: null; }[]>;
+}
+```
+
