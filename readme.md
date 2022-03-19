@@ -12,6 +12,11 @@ ESM URL imports.
 Ensure you are using a recent Node version with ESM and TLA support, e.g.:
 Node latest.
 
+**Note:** KalorickeTabulky does some sort of a client side processing/hashing of
+the password, so instead of your actual password, paste in the corresponding
+value as seen in the `login/create?=&format=json` request in the developer tools
+in your browser when you sign in manually.
+
 ### CLI
 
 1. Set up email and password in `secrets.js` if not done already:
