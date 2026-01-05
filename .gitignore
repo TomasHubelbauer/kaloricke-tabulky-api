@@ -1,2 +1,10 @@
-secrets.js
+email.ts
+password.ts
 log.log
+weight.ts
+
+# Bun
+bun.lock
+
+# NPM
+node_modules
